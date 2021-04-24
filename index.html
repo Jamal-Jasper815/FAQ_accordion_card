@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Displays site properly based on user's device -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <title>Frontend Mentor | FAQ Accordion Card</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- How many team members can I invite?
+    
+    -->
+
+    <section class="card">
+        <img src="images/illustration-box-desktop.svg" alt="" class="card__box">
+        <div class="card__image">
+
+            <img src="images/illustration-woman-online-desktop.svg" alt="woman online desktop">
+        </div>
+
+        <div class="card__text">
+            <h1> FAQ</h1>
+            <div class="accordion">
+                <div class="accordion__item">
+                    <h2>
+                        <button class="accordion__question"> How many members can I invite?
+
+                            <img src="images/icon-arrow-down.svg" style="position: absolute; right:0;" alt="">
+                        </button>
+                    </h2>
+                    <div class="accordion__collapse">
+                        <div class="accordion__content hide">
+                            You can invite up to 2 additional users on the Free plan. There is no limit on
+                            team members for the Premium plan.
+                        </div>
+                    </div>
+                </div>
+                <!-- --------seccond----------- -->
+                <div class="accordion__item">
+                    <h2>
+                        <button class="accordion__question">
+                            What is the maximum file upload size?
+                            <img src="images/icon-arrow-down.svg" style="position: absolute; right:0;" alt="">
+                        </button>
+                    </h2>
+                    <div class="accordion__collapse ">
+                        <div class="accordion__content hide">
+                            No more than 2GB. All files in your account must fit your allotted storage space.
+                        </div>
+                    </div>
+                </div>
+                <!-- --------third----------- -->
+
+                <div class="accordion__item">
+                    <h2>
+                        <button class="accordion__question">
+                            How do I reset my password?
+                            <img src="images/icon-arrow-down.svg" style="position: absolute; right:0;" alt="">
+                        </button>
+                    </h2>
+                    <div class="accordion__collapse">
+                        <div class="accordion__content hide">
+                            Click “Forgot password” from the login page or “Change password” from your profile page.
+                            A reset link will be emailed to you.
+                            Yes! Send us a message and we’ll process your request no questions asked.
+                        </div>
+                    </div>
+                </div>
+                <!-- --------fourth----------- -->
+
+                <div class="accordion__item">
+                    <h2>
+                        <button class="accordion__question">
+                            Can I cancel my subscription?
+                            <img src="images/icon-arrow-down.svg" style="position: absolute; right:0;" alt="">
+                        </button>
+                    </h2>
+                    <div class="accordion__collapse">
+                        <div class="accordion__content hide">
+                            Yes! Send us a message and we'll process your request no questiopns asked.
+                        </div>
+                    </div>
+                </div>
+                <!-- --------fifth----------- -->
+
+                <div class="accordion__item">
+                    <h2>
+                        <button class="accordion__question">
+                            Do you provide additional support?
+                            <img src="images/icon-arrow-down.svg" style="position: absolute; right:0;" alt="">
+                        </button>
+                    </h2>
+                    <div class="accordion__collapse">
+                        <div class="accordion__content hide">
+                            Chat and email support is available 24/7. Phone lines are open during normal business hours.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="/js/script.js"></script>
+</body>
+
+</html>

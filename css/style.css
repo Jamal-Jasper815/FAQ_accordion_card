@@ -1,0 +1,168 @@
+:root {
+  --text-blue: hsl(238, 29%, 16%);
+  --text-dkBlue: hsl(240, 6%, 50%);
+  --text-exDkBlue: hsl(237, 12%, 33%);
+  --text-red: hsl(14, 88%, 65%);
+  --gradient-violet: hsl(273, 75%, 66%);
+  --gradient-blue: hsl(240, 73%, 65%);
+  --divider-blue: hsl(240, 5%, 91%);
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: "Kumbh Sans", sans-serif;
+  background-image: linear-gradient(
+    var(--gradient-violet),
+    var(--gradient-blue)
+  );
+}
+
+button {
+  width: 100%;
+  padding: 0.8rem 0rem;
+  font-size: 1rem;
+  font-family: "Kumbh Sans", sans-serif;
+  border: none;
+  /* margin-left: 10px; */
+  cursor: pointer;
+  border-bottom: 0.1px solid var(--divider-blue);
+}
+
+h2 {
+  position: relative;
+}
+h1 {
+  text-align: center;
+}
+.card {
+  background: white;
+  border-radius: 1rem;
+  max-width: 56rem;
+  margin: 80px 50px;
+  background-image: url("/images/bg-pattern-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: center -3%;
+}
+
+.card__box {
+  display: none;
+}
+
+.card__image img {
+  width: 100%;
+  height: auto;
+  max-width: 15rem;
+  padding: 2rem 1rem;
+  margin: auto;
+  display: block;
+  transform: translateY(-8rem) translateX(0.5rem);
+}
+.card__image {
+  margin-bottom: -5rem;
+}
+.card__text {
+  padding: 20px;
+}
+.accordion__question {
+  color: var(--text-exDkBlue);
+  font-weight: 500;
+  background: transparent;
+}
+
+.accordion__question img {
+  transition: transform 2s ease;
+}
+.accordion__content {
+  color: gray;
+  justify-content: left;
+  margin-left: 30px;
+  line-height: 1.2rem;
+}
+
+.show {
+  display: block;
+  transition: all 2s ease;
+}
+.hide {
+  font-weight: 500;
+  display: none;
+  height: 0px;
+  transition: all 2s ease;
+}
+
+@keyframes slowMotionOpen {
+  from {
+    height: 0px;
+    opacity: 0;
+  }
+  to {
+    height: 50px;
+    opacity: 1;
+  }
+}
+
+@keyframes slowMotionClose {
+  from {
+    height: auto;
+    opacity: 1;
+  }
+  to {
+    height: 0px;
+    opacity: 0;
+  }
+}
+
+/*Media Query*/
+@media (min-width: 56em) {
+  .card {
+    display: flex;
+    margin: 11.625rem auto;
+    background-image: url("/images/bg-pattern-desktop.svg");
+    background-size: 45%;
+    background-position: -13% center;
+    padding-right: 2rem;
+    position: relative;
+    padding-right: 2rem;
+  }
+
+  .card__box {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 55%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 10;
+  }
+
+  .card__image,
+  .card__text {
+    flex: 1;
+  }
+
+  .card__image {
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+  }
+
+  .card__image img {
+    max-width: 25rem;
+    transform: translateX(-4rem);
+  }
+
+  h1 {
+    text-align: left;
+  }
+}
